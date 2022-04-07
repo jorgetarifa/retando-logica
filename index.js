@@ -12,15 +12,14 @@ let btn1 = document.getElementById('btn1'),
     btn1.addEventListener('click', ( ) => {
    let inputNum1 = Number(document.querySelector('.input1').value)
    let inputNum2 = Number(document.querySelector('.input2').value)
-   //console.log(inputNum1, inputNum2);
-        let result = menorNum( inputNum1, inputNum2 )
-        alert(`El numero menor es: ${result}`);
-
-    })
-
-    const menorNum = ( inputNum1, inputNum2) => {
+   
+   let result = menorNum(inputNum1, inputNum2)
+   let result2 = (inputNum1 === inputNum2) ? alert('Por favor ingrese numeros diferentes') :  alert(`El numero menor es: ${result}`)
+   return result2
+})
+    const menorNum = ( a, b) => {
         let arr = [];
-        arr.push(inputNum1, inputNum2)
+        arr.push(a, b)
         let minim = Math.min(...arr)
         //console.log(minim);
         return minim
